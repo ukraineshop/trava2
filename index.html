@@ -304,13 +304,14 @@ src="https://www.facebook.com/tr?id=723210859787213&ev=PageView&noscript=1"
                         e.preventDefault(); // Запобігаємо стандартній відправці форми
                      
                         // Отримуємо значення полів форми
+			     var count = document.querySelector('input[name="count"]').value;
                         var name = document.querySelector('input[name="name"]').value;
                         var phone = document.querySelector('input[name="phone"]').value;
                        
                         
                      
                         // Формуємо повідомлення
-                        var message = `Нове замовлення:\nІм'я та прізвище: ${name} \nТелефон: ${phone};`
+                        var message = `Нове замовлення:\nІм'я та прізвище: ${name} \nТелефон: ${phone} /nКількість:  ${count} ;`
 					
                      
                         // Ваш токен та ID чату
@@ -351,8 +352,9 @@ src="https://www.facebook.com/tr?id=723210859787213&ev=PageView&noscript=1"
 
 			<form id="order_form" class="order_form" action="./трава_files/thank_you_page.html" method="post">
 				<select name="comment" class="field form-control form-select mb-3">
-					<option value="1 комплект" data-productid="201" data-count="1" data-prise="1549" selected="">Акумуляторний тример 1 шт - 1549грн</option>
-						<option value="2 комплекти " data-productid="201" data-count="1" data-prise="2898">Акумуляторний тример 2 шт  зі знижкою - 2898 грн</option>
+					<option value="10м" data-productid="201" data-count="10м" data-prise="10" selected="">10м</option>
+						<option value="20м " data-productid="201" data-count="20м" data-prise="20">20м</option>
+					<option value="50м " data-productid="201" data-count="50м" data-prise="50">50м</option>
 					
 				</select>
 				
